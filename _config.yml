@@ -1,63 +1,167 @@
-# Site
-title:              MLKOREA
-bio:                'Jekyll version of the Massively theme by HTML5UP'
-description:        "Jekyll version of the Massively theme by HTML5UP"
-locale:             en_US
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# ,--------.      ,--.   ,--. ,--.
+# '--.  .--',---.  \  `.'  /,-'  '-.
+#    |  |  | .-. :  .'    \ '-.  .-'
+#    |  |  \   --. /  .'.  \  |  |
+#    `--'   `----''--'   '--' `--'
 
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/blog/:title/"
-    layout: post
-    author:
 
-# Jekyll
-permalink:          /blog/:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
 
-# Comments
-disqus_shortname:   default
 
-# Social
-analytics-id:       "default"
-# twitter:            default
-# facebook:           default
-# instagram:          default
-github:             mlkorea/mlkorea.github.io
+## => Site Settings
+##############################
+text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+url: # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl: # does not include hostname
+title: Someone's blog
+description: > # this means to ignore newlines until "Language & timezone"
+  Someone's Blog
 
-# personal
-location:           Stony Brook, NY
-phone:              631-524-1680
-email:              ml.wyjeong@gmail.com
 
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-sitemap
+## => Language and Timezone
+##############################
+lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+
+## => Author and Social
+##############################
+author:
+  name: Someone
+  email: someone@somemail.com # your Email address e.g. someone@site.com
+  facebook: # your Facebook username
+  twitter: # your Twitter username
+  github: # your GitHub username
+  linkedin: # your Linkedin username
+  googleplus: # your Google+ username
+  weibo: # your Weibo username
+  douban: # your Douban username
+
+
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: someone/someone.github.io
+repository_tree: master
+
+
+## => Navigation
+##############################
+paths:
+  base: /
+  home: /
+  all:  /all.html
+  rss:  /feed.xml
+
+nav_lists:
+  - titles:
+      en: About
+      zh: 关于
+      zh-Hans: 关于
+      zh-Hant: 關於
+    url: /about.html
+
+
+## => Post
+##############################
+## excerpt
+excerpt_separator: <!--more-->
+excerpt_type: html # text (default), html
+
+## TOC
+toc:
+  selectors: # "h1,h2,h3" (default)
+
+## Markdown Enhancements
+
+# Mathjax
+mathjax: # false (default), true
+mathjax_autoNumber: # false (default), true
+
+# Mermaid
+mermaid: # false (default), true
+
+# Chart
+chart: # false (default), true
+
+
+## => Paginate
+##############################
+paginate: 8
+paginate_path: /blog/page:num # don't change this unless for special need
+
+
+## => Sources
+##############################
+sources: # bootcdn (default), unpkg
+
+
+## => Comments
+##############################
+## Disqus
+disqus:
+  shortname: # the Disqus shortname for the site
+
+## Gitalk
+# please refer to https://github.com/gitalk/gitalk for more info.
+gitalk:
+  clientID: # GitHub Application Client ID
+  clientSecret: # GitHub Application Client Secret
+  repository: # GitHub repo
+  owner: # GitHub repo owner
+  admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    # - your GitHub Id
+
+
+## => Pageview
+##############################
+## Leancloud
+leancloud:
+  app_id: # LeanCloud App id
+  app_key: # LeanCloud App key
+  app_class: # LeanCloud App class
+
+
+## => Analytics
+##############################
+## Google Analytics
+ga_tracking_id: # Google Analytics id for the site
+
+
+## => Build
+##############################
+markdown: kramdown
+highlighter: rouge
+permalink: date
+
+exclude:
+  - CHANGELOG.md
+  - CHECKLIST.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README-*.md
+  - README.md
+  - gulpfile.js
+  - jekyll-text-theme.gemspec
+  - package-lock.json
+  - package.json
+  - /docs
+  - /node_modules
+  - /screenshots
+  - /test
+  - /vendor
+
+
+## => Plugins
+##############################
+plugins:
   - jekyll-feed
-  - jekyll-gist
   - jekyll-paginate
-
-paginate: 6
-paginate_path: "/blog/page:num/"
-
-jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
+  - jekyll-sitemap
+  - jemoji
