@@ -17,38 +17,35 @@
 ## => Site Settings
 ##############################
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-url: # the base hostname & protocol for your site e.g. https://www.someone.com
+url: https://mlkorea.github.io/ # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
-title: Someone's blog
+title: MLKOREA
 description: > # this means to ignore newlines until "Language & timezone"
-  Someone's Blog
+  MLKOREA
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
-timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+lang: en # the language of your site, "en" (default, English)
+timezone: America/New_York # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
-  name: Someone
-  email: someone@somemail.com # your Email address e.g. someone@site.com
+  name: Wonyong Jeong
+  email: ml.wyjeong@gmail.com # your Email address e.g. someone@site.com
   facebook: # your Facebook username
   twitter: # your Twitter username
-  github: # your GitHub username
+  github: mlkorea # your GitHub username
   linkedin: # your Linkedin username
   googleplus: # your Google+ username
-  weibo: # your Weibo username
-  douban: # your Douban username
-
+  
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: someone/someone.github.io
+repository: mlkorea/mlkorea.github.io
 repository_tree: master
-
 
 ## => Navigation
 ##############################
